@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<sssdata>
+    <sssitem>
+        <display>example program 1</display>
+        <command>xterm -sb</command>
+        <machine>192.168.1.4</machine>
+        <desc>this is description of example 1</desc>
+    </sssitem>
+    <sssitem>
+        <display>example program 2</display>
+        <command>ls</command>
+        <machine>chrome</machine>
+        <desc>this is description of example 2.
+            it has more than on line, IMHO - and: 
+            here is another break! (control sequences like \n are ignored!)
+        </desc>
+        <needsarg/>
+        <defaultarg>-la /home</defaultarg>
+    </sssitem>
+    <sssitem>
+        <display>example program 3</display>
+        <command>xterm</command>
+        <machine>newrose</machine>
+        <!-- this item has NO description -->
+        <defaultarg>-sb</defaultarg>
+    </sssitem>
+        <sssitem>
+        <display>example program 4</display>
+        <command>xterm -sb</command>
+        <machine>neuromancer</machine>
+        <desc>thats the description of item 4!</desc>
+    </sssitem>
+</sssdata>
