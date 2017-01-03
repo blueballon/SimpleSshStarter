@@ -107,7 +107,7 @@ $outputfield = $mw->Scrolled( "Text",
                               -state => 'normal' )->grid(-row=>1, 
                                                          -column=>1, 
                                                          -columnspan=>2);
-$outputfield->insert('end', "Simple SSH/Script Starter Version 0.2etf (2006/05/09)\n");
+$outputfield->insert('end', "Simple SSH/Script Starter Version 0.21 (2017/01/03)\n");
 $outputfield->insert('end', "Report bugs, comments, etc to blue.balloon\@gmx.net\n");
 $outputfield->insert('end', "-----------------------------------------------------\n");
 $outputfield->insert('end', "Local settings: $localXMLstatus\n");
@@ -191,9 +191,6 @@ sub execSSH
             $execString=$remCmd . " " . $aktMch . " " . $aktCmd . " 2>&1 &";	
     }
 
-    # ist blockierend, geht f. uns nicht
-    #my @result=`$execString`;
-    #printListToText($outtext,\@result);
 
     # asynchronous execution with system needs different handling on win32
     if ($^O=~/MSWin32/)
@@ -281,10 +278,6 @@ sub examineUser
       if (!$USER)
       {
          $USER=$ENV{'USER'}; 
-      }
-      if (!$USER)
-      {
-         $USER=$ENV{'BSYSUSER'};
       }
    }
    
